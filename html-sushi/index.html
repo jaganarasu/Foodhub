@@ -4,19 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Taste of Fireworks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+      
+
+
+body {
+ 
+background-image:url('./images/bg.png');
+background-color: #9a0201;
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+.header {
+background-color: black;
+
+
+}
+
+
+.header h1 {
+    text-transform: uppercase;
+    color: transparent;
+    font-style: italic;
+  -webkit-text-fill-color: transparent;  
+  -webkit-text-stroke-width: 9px;
+  -webkit-text-stroke: 1.2px #ff8733;
+  text-transform: uppercase;
+  font-weight: 300;
+  line-height: 1.2;
+  animation: blink 9s infinite;
+  -webkit-animation: blink 9s infinite;
+}
+.header .col-md-12{
+    padding: 0;
+}
+    
+
+@-webkit-keyframes blink {
+20%,
+24%,
+55% {
+color: #111;
+text-shadow: none;
+}
+
+0%,
+19%,
+21%,
+23%,
+25%,
+54%,
+56%,
+100% {
+
+  text-shadow: 0 0 5px #ff8733, 0 0 15px #ff8733, 0 0 20px #ff8733, 0 0 40px #ff8733, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+ 
+  text-shadow: 0 0 5px #ff8733, 0 0 15px #ff8733, 0 0 20px #ff8733, 0 0 40px #ff8733, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
+.header .btn-primary {
+    color: #fff;
+    background-color: #9a0201;
+    border-color: #9a0201;
+  
+}
+
+.header .btn-primary{
+    margin-top: -30%;
+}
+
+
+.about{
+ 
+    background-color: #9a0201;
+    
+  
+}
+ 
+    </style>
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="block">
+<div class="header">
+    <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-md-8 text-center">
-                <h1 class="display-4">A Taste of Fireworks</h1>
-                <h2 class="lead">In Your Taste Buds</h2>
-                <img src="your-image.jpg" class="img-fluid mt-4" alt="Sushi">
-                <a href="#" class="btn btn-primary btn-lg mt-4">Order Now</a>
-            </div>
+                <div class="col-md-8 text-center pt-5 pb-5 ">
+                     <h1>A Taste of Fireworks <br/>In Your Taste Buds</h1>                    
+                       
+                </div>
+                <div class="col-md-12 text-center">               
+                    <img src="images/sushi-001.jpg" class="img-fluid " alt="Sushi">
+                    <a href="#" class="btn btn-primary   ">ORDER NOW</a>
+                </div>
         </div>
     </div>
+</div>
+<div class="about">
+
+    bh
+</div>
+</div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
