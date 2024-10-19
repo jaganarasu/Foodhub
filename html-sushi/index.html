@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
       
 
@@ -2413,6 +2416,43 @@ text-shadow: none;
     z-index: 6;
 }
 
+
+.circle {
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%;  
+    margin: -90px auto 15px;  
+    background-color: #ebdc2f; 
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    border: 5px dotted  #b90301; /* Add border with desired color and width */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: add a shadow for effect */
+}
+
+.circle img {
+    width: 60%; /* Adjust the image width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Optional: makes the image circular */
+}
+
+.card{
+    background-color: #b90301;
+}
+.card h5{
+    color: #ebdc2f;    font-weight: 800;
+}
+.card p{
+    color: #ffffff;
+}
+
+.owl-carousel img{
+    border-radius: 50%;
+    padding: 10%;
+}
+
+
+ 
     </style>
 </head>
 <body>
@@ -2420,7 +2460,7 @@ text-shadow: none;
 <div class="header">
     <div class="container-fluid">
         <div class="row justify-content-center">
-                <div class="col-md-8 text-center pt-5 pb-5 ">
+                <div class="col-md-8 text-center pt-5 pb-5 " data-aos="fade-up">
                      <h1>A Taste of Fireworks <br/>In Your Taste Buds</h1>                    
                        
                 </div>
@@ -2433,7 +2473,7 @@ text-shadow: none;
 </div>
 <div class="about padding-set">
     <div class="container pt-5 pb-5 mx-auto">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center"  >
             <div class="col-md-6">
                 <h1> Savour Authentic Japanese Flavours</h1>
                 <p>
@@ -2441,7 +2481,7 @@ text-shadow: none;
                 </p>
                 <a href="#" class="btn btn-outline-light  ">ORDER NOW</a>
             </div>
-            <div class="col-md-6 text-center ">
+            <div class="col-md-6 text-center mt-2 ">
                 <img src="images/fried-rice.jpg" class="img-fluid img-path " alt="fried-rice">
                 <img src="images/spring-roll.jpg" class="img-fluid img-path ma-top" alt="spring-roll">
                 <img src="images/tempura-prawn.jpg" class="img-fluid img-path ma-top" alt="tempura-prawn">
@@ -2461,7 +2501,7 @@ text-shadow: none;
                 
                 </div>
                 <div class="white-circle"></div>
-                <img src="images/momo-a.png" alt="momo" class="img-fluid img-path-ma">
+                <img src="images/momo-a.png" alt="momo" class="img-fluid d-none d-lg-block img-path-ma">
                 
             </div>
             <div class="col-md-7">
@@ -3057,10 +3097,127 @@ text-shadow: none;
         </div>
     </div>
 
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 mt-5 mb-5">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="circle">
+                            <img src="images/fast-delivery.png" alt="Food" class="mb-3" width="64">
+                        </div>  
+                        
+                        <h5 class="card-title">PICK A DISH</h5>
+                        <p class="card-text">Choose your favourite dish from our delectable menu.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mt-5 mb-5">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <div class="circle">
+                            <img src="images/wallet.png" alt="Wallet" class="mb-3" width="64">
+                        </div>  
+                       
+                        <h5 class="card-title">MAKE A PAYMENT</h5>
+                        <p class="card-text">Online payment is simple and convenient.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mt-5 mb-5">
+                <div class="card h-100">    
+                    <div class="card-body text-center">
+                        <div class="circle">
+                            <img src="images/food-tray.png" alt="Delivery truck" class="mb-3" width="64">
+                        </div>  
+                        
+                        <h5 class="card-title">RECEIVE YOUR FOOD</h5>
+                        <p class="card-text">Get your food delivered right at your doorstep.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 mt-5 mb-5">
+                <h1> Savour Authentic Japanese Flavours</h1>
+                <p>
+                    Discover the authentic flavours of Japan at {TAKEAWAY NAME} in {TAKEAWAY TOWN}, where traditional culinary techniques meet modern creativity. Immerse yourself in the rich tapestry of Japanese cuisine and embark on a culinary journey that will tantalise your taste buds.
+                </p>
+                <a href="#" class="btn btn-outline-light">ORDER NOW</a>
+            </div>
+            <div class="col-md-6 mt-5 mb-5">
+                <div class="morphing-container"> 
+
+                    <img src="images/dim-sim.jpg" alt="Animated Image" class="img-fluid">
+                
+                </div>
+                <div class="white-circle"></div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+<div class="about padding-set">
+    <div class="container mt-2">
+        <div class="row justify-content-center">   
+            <div class="col-md-12 text-center">
+            <h1><i> Our Specials</i></h1>
+            </div>
+            <div class="col-md-12">
+
+                <div class="owl-carousel">
+                    <img src="images/dim-sim.jpg" alt="food dish" class="img-fluid">
+                    <img src="images/dim-sim.jpg" alt="food dish" class="img-fluid">
+                    <img src="images/dim-sim.jpg" alt="food dish" class="img-fluid">
+                    <img src="images/dim-sim.jpg" alt="food dish" class="img-fluid">
+                    <img src="images/dim-sim.jpg" alt="food dish" class="img-fluid">
+                    <img src="images/dim-sim.jpg" alt="food dish" class="img-fluid">
+                    <img src="images/dim-sim.jpg" alt="food dish" class="img-fluid">
+                    <img src="images/dim-sim.jpg" alt="food dish" class="img-fluid">
+
+                </div>
+
+               
+            </div>
+
+        </div>
+    </div>
 </div>
  
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            autoplay: true,
+            responsiveClass: true,
+            nav: true,
+            margin: 0,    
+            autoplayTimeout: 4000,
+            smartSpeed: 400,
+            center: true,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                600: {
+                    items: 3
+                },
+                1200: {
+                    items: 3
+                }
+            }
+        });
+        AOS.init();
+      </script>
 </body>
 </html>
