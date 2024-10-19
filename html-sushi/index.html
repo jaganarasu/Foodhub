@@ -45,14 +45,14 @@
 
 body{
     font-family: "Montserrat", sans-serif;
-    
+    background-color: #9a0201;
 }
  
 
 
 .header {
     background-color: #000;
-  
+    border-radius: 0 0 50% 50% !important;
  }
 
  .padding-set{
@@ -61,23 +61,41 @@ body{
  }
 
 .header h1 {
+
+
     text-transform: uppercase;
     color: transparent;
     font-style: italic;
   -webkit-text-fill-color: transparent;  
   -webkit-text-stroke-width: 9px;
-  -webkit-text-stroke: 1.2px #ff8733;
-  text-transform: uppercase;
-  font-weight: 300;
+  -webkit-text-stroke: 1.9px #f9e326;
+ 
+  font-weight: 800;
   line-height: 1.2;
-  animation: blink 9s infinite;
-  -webkit-animation: blink 9s infinite;
+  animation: blink 2s infinite;
+  -webkit-animation: blink 2s infinite;
 }
 .header .col-md-12{
     padding: 0;
 }
-    
-
+@-webkit-keyframes blink {
+  20%, 24%, 55% {
+    color: #111;
+    text-shadow: none;
+  }
+  
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    text-shadow: 0 0 5px #ff883350, 
+                 0 0 15px #ff883350, 
+                 0 0 20px #ff883350, 
+                 0 0 40px #ff883350, 
+                 0 0 60px #9a0201, 
+                 0 0 10px #ff883350, 
+                 0 0 98px #9a0201;
+    color: #fff6a9;
+  }
+}
+/* 
 @-webkit-keyframes blink {
 20%,
 24%,
@@ -98,29 +116,9 @@ text-shadow: none;
   text-shadow: 0 0 5px #ff8733, 0 0 15px #ff8733, 0 0 20px #ff8733, 0 0 40px #ff8733, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
     color: #fff6a9;
   }
-}
+} */
 
-@keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #111;
-    text-shadow: none;
-  }
-
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
  
-  text-shadow: 0 0 5px #ff8733, 0 0 15px #ff8733, 0 0 20px #ff8733, 0 0 40px #ff8733, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-    color: #fff6a9;
-  }
-}
 .header .btn-primary {
     color: #fff;
     background-color: #9a0201;
@@ -2684,13 +2682,60 @@ text-shadow: none;
     .about p,.para-1{
         font-size: 1.2rem;
     }
+    .header, .image-set{
+        border-radius: 0  !important;
+    }
 }
+
+.startanimationtop {
+    -webkit-animation: slideUpDownSmall 8s infinite linear;
+    animation: slideUpDownSmall 8s infinite linear;
+}
+
+@keyframes slideUpDownSmall
+{
+  0%{-webkit-transform:translate3d(0, 0px, 0);
+    transform:translate3d(0, 0px, 0)
+	}
+  25%{-webkit-transform:translate3d(0, 25px, 0);
+     transform:translate3d(0, 25px, 0)
+	 }
+  50%{-webkit-transform:translate3d(0, 0px, 0);
+      transform:translate3d(0, 0px, 0)}
+  75%{-webkit-transform:translate3d(0, -25px, 0);
+       transform:translate3d(0, -25px, 0)}
+  100%{-webkit-transform:translate3d(0, 0px, 0);
+       transform:translate3d(0, 0px, 0)}}
+ 
+  .image-set{
+    border-radius: 0 0 50% 50% !important;
+  }
+
+  .image-bg{
+    position: relative;
+
+  }
+  .image-bg::after{
+    width: 887px;
+    height: 608px;
+    content: " ";
+    position: absolute;
+    bottom: -142px;
+    right: -320px;
+    background-image: url('images/bg-1.png'); /* Add image */
+    background-size: cover;  
+    opacity: 0.5;
+    transform: scale(0.5);
+
+
+  }
     </style>
 </head>
 <body>
     
-<div class="header">
+    <div class=" header"> 
     <div class="container-fluid">
+     
         <div class="row justify-content-center">
                 <div class="col-md-8 text-center pt-5 pb-5 " data-aos="fade-up"
                 data-aos-duration="500">
@@ -2698,14 +2743,16 @@ text-shadow: none;
                        
                 </div>
                 <div class="col-md-12 text-center">               
-                    <img src="images/sushi-001.jpg" class="img-fluid " alt="Sushi">
+                    <img src="images/sushi-001.jpg" class="img-fluid  image-set" alt="Sushi">
                     <a href="#" class="btn btn-primary   " data-aos="fade-up"
                     data-aos-duration="500">ORDER NOW</a>
                 </div>
         </div>
     </div>
-</div>
+</div> 
+
 <div class="about padding-set">
+    <div class ="white-block"></div>
     <div class="container pt-5 pb-5 mx-auto">
         <div class="row justify-content-center"  >
             <div class="col-md-6" data-aos="fade-right">
@@ -2715,7 +2762,7 @@ text-shadow: none;
                 </p>
                 <a href="#" class="btn btn-white-black ">ORDER NOW</a>
             </div>
-            <div class="col-md-6 text-center mt-4" data-aos="fade-left">
+            <div class="col-md-6 text-center mt-4 startanimationtop" data-aos="fade-left">
                 <img src="images/fried-rice.jpg" class="img-fluid img-path "  alt="fried-rice">
                 <img src="images/spring-roll.jpg" class="img-fluid img-path ma-top" alt="spring-roll">
                 <img src="images/tempura-prawn.jpg" class="img-fluid img-path ma-top" alt="tempura-prawn">
@@ -2723,7 +2770,7 @@ text-shadow: none;
         </div>
     </div>
 </div>
-<div class="about-text padding-set">
+<div class="about-text padding-set image-bg ">
     <div class="container pt-5 pb-5 mx-auto">
         <div class="row justify-content-center">
             <div class="col-md-5 z" data-aos="fade-right">
@@ -3374,7 +3421,8 @@ text-shadow: none;
         </div>
     </div>
     <div class="container mt-5">
-        <div class="row">
+        <div class="row ">
+       
             <div class="col-md-6 mt-5 mb-5" data-aos="fade-right">
                 <h1 class="head-1"> Savour Authentic Japanese Flavours</h1>
                 <p class="para-1">
@@ -3382,18 +3430,19 @@ text-shadow: none;
                 </p>
                 <a href="#" class=" btn btn-grad">ORDER NOW</a>
             </div>
-            <div class="col-md-6 mt-5 mb-5"  data-aos="fade-left">
+            <div class="col-md-6 mt-5 mb-5 z"  data-aos="fade-left">
+              
                 <div class="morphing-container"> 
 
                     <img src="images/dim-sim.jpg" alt="Animated Image" class="img-fluid">
                 
                 </div>
                 <div class="white-circle"></div>
-
+            </div>
             </div>
 
 
-        </div>
+        
     </div>
 
 </div>
@@ -3411,49 +3460,49 @@ text-shadow: none;
                 <div class="owl-carousel">
                  
                         <div class="item">
-                            <img src="images/dim-sim.jpg" alt="food dish" class="img-fluid center">
+                            <img src="images/dim-sim.jpg" alt="food dish" class="img-fluid circle-image">
                             <div class="item-inner text-center">
                                 <h5>Sushi</h5>
                                 <a href="#" class="btn">ORDER NOW</a>
                             </div>
                         </div>
                         <div class="item">
-                            <img src="images/donburi.jpg" alt="food dish" class="img-fluid">
+                            <img src="images/donburi.jpg" alt="food dish" class="img-fluid circle-image">
                             <div class="item-inner text-center">
                                 <h5> donburi</h5>
                                 <a href="#" class="btn">ORDER NOW</a>
                             </div>
                         </div>
                         <div class="item">
-                            <img src="images/sashimi.jpg" alt="food dish" class="img-fluid">
+                            <img src="images/sashimi.jpg" alt="food dish" class="img-fluid circle-image">
                             <div class="item-inner text-center">
                                 <h5> sashimi</h5>
                                 <a href="#" class="btn">ORDER NOW</a>
                             </div>
                         </div>
                         <div class="item">
-                            <img src="images/sushi.jpg" alt="food dish" class="img-fluid">
+                            <img src="images/sushi.jpg" alt="food dish" class="img-fluid circle-image">
                             <div class="item-inner text-center">
                                 <h5> sushi</h5>
                                 <a href="#" class="btn">ORDER NOW</a>
                             </div>
                         </div>
                         <div class="item">
-                            <img src="images/momos.jpg" alt="food dish" class="img-fluid">
+                            <img src="images/momos.jpg" alt="food dish" class="img-fluid circle-image">
                             <div class="item-inner text-center">
                                 <h5> momos</h5>
                                 <a href="#" class="btn">ORDER NOW</a>
                             </div>
                         </div>
                         <div class="item">
-                            <img src="images/prawn-spring-roll.jpg" alt="food dish" class="img-fluid">
+                            <img src="images/prawn-spring-roll.jpg" alt="food dish" class="img-fluid circle-image">
                             <div class="item-inner text-center">
                                 <h5>  prawn spring roll</h5>
                                 <a href="#" class="btn">ORDER NOW</a>
                             </div>
                         </div>
                         <div class="item">
-                            <img src="images/prawn-tempura.jpg" alt="food dish" class="img-fluid">
+                            <img src="images/prawn-tempura.jpg" alt="food dish" class="img-fluid circle-image">
                             <div class="item-inner text-center">
                                 <h5>prawn </h5>
                                 <a href="#" class="btn">ORDER NOW</a>
