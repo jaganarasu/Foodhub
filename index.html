@@ -56,20 +56,41 @@ width: 400px;
        transform:translate3d(0, -25px, 0)}
   100%{-webkit-transform:translate3d(0, 0px, 0);
        transform:translate3d(0, 0px, 0)}}
+
+.btn{
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    animation: pulse 1.5s infinite; /* Add pulsing animation */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Original size */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Original shadow */
+    }
+    50% {
+        transform: scale(1.1); /* Slightly larger */
+        box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+    }
+    100% {
+        transform: scale(1); /* Back to original size */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Back to original shadow */
+    }
+}
+      
     </style>
 </head>
 <body>
     <div class="header ">
-        <div class="container  mt-5 mb-5 h-100">
+        <div class="container h-100">
             <div class="row h-100 text-center justify-content-center align-items-center  ">
 
-                <div class="col-md-6 text-center startanimationtop">               
-                    <a href="/sushi/index.html"  ><img src="./sushi/images/dim-sim.jpg" class="img-fluid  image-set" alt="Sushi">
+                <div class="col-md-6  mt-5 mb-5  text-center startanimationtop">               
+                    <a href="/sushi/index.html"  ><img src="./sushi/images/sushi.jpg" class="img-fluid  image-set" alt="Sushi">
                     </a>
                     <h1>Sushi</h1>
                     <a href="/sushi/index.html"   class="btn btn-success">  Click here</a>
                 </div>
-                <div class="col-md-6 text-center startanimationtop">               
+                <div class="col-md-6  mt-5 mb-5 text-center startanimationtop">               
                     <a href="/pizza/index.html">  <img src="./pizza/images/pizza.jpg" class="img-fluid  image-set" alt="pizza">
                     </a>
                     <h1>Pizza</h1>
