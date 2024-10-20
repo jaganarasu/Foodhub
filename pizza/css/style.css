@@ -533,6 +533,11 @@ background: linear-gradient(8deg, rgba(223,242,6,1) 0%, rgba(145,172,0,1) 35%);
         left: 30% !important;
 
     }
+    .img-hand{
+        right: -8%;
+        position: relative;
+        width: 100%;
+    }
 }
 
 
@@ -545,6 +550,15 @@ background: linear-gradient(8deg, rgba(223,242,6,1) 0%, rgba(145,172,0,1) 35%);
         top: -122px !important;
         left: -201px !important;
     }
+    .content-aa{
+        left: 30%;
+    }
+    .img-hand {
+        right: -3%;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+    }
   }
 /*working only in ipad-min landscape device*/
   @media all and (width: 1024px) and (height: 768px) and (orientation:landscape){
@@ -556,6 +570,9 @@ background: linear-gradient(8deg, rgba(223,242,6,1) 0%, rgba(145,172,0,1) 35%);
         left: -139px !important;
     
     }
+    .content-aa{
+        left: 25%;
+    }
   }
 /*working only in ipad-air portrait device*/
 @media only screen and (width: 820px) and (height: 1180px) and (orientation:portrait) {
@@ -565,6 +582,9 @@ background: linear-gradient(8deg, rgba(223,242,6,1) 0%, rgba(145,172,0,1) 35%);
     .about-right::after {
         top: -122px !important;
         left: -201px !important;
+    }
+    .content-aa{
+        left: 29%;
     }
   }
 /*working only in ipad-min landscape device*/
@@ -576,6 +596,9 @@ background: linear-gradient(8deg, rgba(223,242,6,1) 0%, rgba(145,172,0,1) 35%);
         top: -157px !important;
         left: -139px !important;
     
+    }
+    .content-aa{
+        left: 25%;
     }
   }
 
@@ -599,12 +622,18 @@ background: linear-gradient(8deg, rgba(223,242,6,1) 0%, rgba(145,172,0,1) 35%);
         left: -141px;
     
     }
+    .content-aa {
+        left: 21%;
+    }
   }
   @media only screen and (min-width: 768px) {
     .about-right::after {
         top: -180px;
         left: -107px;
     
+    }
+    .content-aa{
+        left: 25%;
     }
   }
  
