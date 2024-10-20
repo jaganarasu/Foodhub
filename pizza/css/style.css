@@ -1,39 +1,439 @@
-* {
-    box-sizing: border-box;
-}
-
 html, body {
-    margin: 0;
-    padding: 0;
     height: 100%; /* Ensure body takes full height */
+    margin: 0; /* Remove default margin */
+    position: relative; /* Allow positioning for absolute children */
 }
 
 body {
     background-color: #91ac00; 
-    position: relative;
-    margin: 0;
-    padding: 0;
     font-family: "Road Rage", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
-body::before {
+
+body::before { 
     content: '';
     position: absolute;
-    top: 0;
+    top: 0; /* Adjust top to 0 */
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../images/bg.png'); /* Check this path */
+    background-image: url('../images/bg.png');  
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0.9;  
-    z-index: 0; /* Keep this lower than the body content */
+    z-index: -1; /* Set z-index lower than content */
+} 
+
+
+
+.wrapper {
+    overflow: hidden;
+    position: relative;
 }
 
-.header.container-fluid {
-    padding: 0;
+.left,
+.right {
+width: 100%;
+
+top: 0;
+transform: skewX(-5deg);
+overflow: hidden;
+}  
+
+
+
+.left {
+position: relative;
+left: 0%; 
+border-right: 5px solid #ffffff;
+}
+
+.right {
+position: absolute;
+right: 0%;  
 
 }
 
+/* .left .inner,
+.right .inner {
+width: 100%;
+height: 100%;
+background-size: cover;
+background-repeat: no-repeat;
+transform: skewX(8deg);
+} */
+
+
+ 
+ 
+ 
+
+.img-path {
+object-fit: cover;  
+width: 100%;
+height: 100%;  
+}
+
+/* Carousel height */
+.carousel-inner {
+    height: 100%; 
+}
+
+.carousel-item {
+    position: relative;
+    height: 500px; 
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;  
+    align-items: center; 
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);  
+    padding: 20px;
+    z-index: 1; /* Ensure captions are above images */
+}
+
+/* Styling for the heading */
+.carousel-caption h1 {
+    font-size: 8rem;
+    font-weight: 800;
+    line-height: 7rem;
+    text-shadow: 2px 2px #91ac00;
+    text-transform: uppercase;
+}
+
+.button-home {
+    position: absolute;
+    top: 50%;   
+    left: 50%; /* Centers horizontally */
+    transform: translate(-50%, -50%); /* Perfect center */
+}
+
+.button-home .btn {
+    color: #91ac00;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1.8em;
+}
+
+.button-home .btn:hover {
+    color: #ffffff;
+    background-color: #91ac00;
+    border-color: #91ac00;
+    border: 2px solid #000000;
+}
+.container-1{
+    position: relative;
+}
+.army-bomb-container {
+    position: absolute;
+    left: 50%;
+    top: 19%;
+    transform: translate(-50%, -50%);
+}
+
+.army-bomb {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    background-color: white;
+    border-radius: 30px;
+    animation: light-up 3s infinite ease-in-out;
+    opacity: 0.9;
+}
+
+.army-bomb::before {
+    width: 67px;
+    height: 72px;
+    content: " ";
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%); 
+    background-image: url('../images/glitter.png'); /* Add image */
+}
+
+/* Glowing animation */
+@keyframes light-up {
+    0%   { box-shadow: 0px 0px 50px 1px white; }
+    50%  { box-shadow: 0px 0px 50px 30px white; }
+    100% { box-shadow: 0px 0px 50px 1px white; }
+}
+
+
+.about{
+    position: relative;
+    
+    background-color: #91ac00; 
+}
+
+.about-left{
+    padding-top: 20%;
+    padding-bottom: 20%;
+    background: white;
+    border-radius: 120px;
+    border: 5px dotted #91ac00;
+}
+.about-left h5{
+    color: #91ac00;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+ 
+.about::before { 
+    content: '';
+    position: absolute;
+    top: 0; /* Adjust top to 0 */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/bg.png');  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;  
+      /* Set z-index lower than content */
+} 
+/* .about-right{
+    background-image: url('../images/towel-2.png');  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  
+ 
+    color: #ffffff;
+    
+  
+  
+} */
+.about-right::after{
+    z-index: -2;
+    width: 782px;
+    height: 602px;
+    content: " ";
+    position: absolute;
+    top: -180px;
+    left: -87px;
+    background-image: url(../images/towel-2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transform: scale(0.8);
+
+  }
+  .about-right-tomot{
+  
+    position: absolute;
+    bottom: -177px;
+    left: -9px;
+ 
+
+  }
+  .startanimationtop {
+    -webkit-animation: slideUpDownSmall 8s infinite linear;
+    animation: slideUpDownSmall 8s infinite linear;
+}
+
+@keyframes slideUpDownSmall
+{
+  0%{-webkit-transform:translate3d(0, 0px, 0);
+    transform:translate3d(0, 0px, 0)
+	}
+  25%{-webkit-transform:translate3d(0, 25px, 0);
+     transform:translate3d(0, 25px, 0)
+	 }
+  50%{-webkit-transform:translate3d(0, 0px, 0);
+      transform:translate3d(0, 0px, 0)}
+  75%{-webkit-transform:translate3d(0, -25px, 0);
+       transform:translate3d(0, -25px, 0)}
+  100%{-webkit-transform:translate3d(0, 0px, 0);
+       transform:translate3d(0, 0px, 0)}}
+ 
+
+.about-right h1{
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #ffffff;
+}
+.about-right p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #ffffff;
+}
+.about-right-inner{
+    transform: scale(0.8);
+    z-index: 4;
+
+}
+.btn {
+    color: #91ac00;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 1.8em;
+}
+ .btn:hover {
+    color: #ffffff;
+    background-color: #91ac00;
+    border-color: #91ac00;
+    border: 2px solid #000000;
+}
+ 
+
+/* Media Queries for Responsive Design */
+@media (max-width: 576px) {
+    .about-right-inner{
+        transform: scale(0.9);
+        z-index: 4;
+    
+    }.about-right-tomot {
+        
+        bottom: -113px;
+    }
+    .about-right::after{ 
+        left: -184px;
+        top: -143px;
+        transform: scale(0.7);
+    }
+    .left {
+        border-right: 0px solid #ffffff; /* Remove border on smaller screens */
+    }
+    
+    .left, .right {
+        transform: skewX(0deg); /* Remove skew on small screens */
+    }
+
+    .army-bomb {
+        display: none; /* Hide army bomb on small screens */
+    }
+    .gallery{
+        padding-right: 10% !important;
+    padding-left: 10% !important;
+    }
+    .label-left {
+        left: -60px;
+    }
+    .label-right {
+        right: -60px;
+    }
+}
+
+.carda {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    margin: 20px;
+    z-index: 3;
+}
+.carda img {
+    border-radius: 15px;
+    height: 300px;
+    width: 100%;
+}
+ .label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(270deg);
+    background-color: #c2ce00;
+    padding: 10px 20px;
+    width: 200px;
+    font-weight: bold;
+    color: #000;
+    border-radius: 60px;
+    text-transform: uppercase;
+    box-shadow: 0 0 20px #3d3d3d;
+   
+ 
+}
+
+.label-left {
+    left: -80px;
+ 
+}
+.label-right {
+    right: -80px;
+   
+}
+.label h3 {
+    font-size: 2rem;
+    color: #252425;
+}
+.heelo-about h1 {
+    font-size: 6rem;
+    color: #ffffff;
+}
+.heelo-about p {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+.heelo-about .card img{
+    padding: 5%;
+}
+.heelo-about .card-body{
+    border: 2px solid #000000;
+    border-radius: 20px;
+    padding: 5px 0 4px;
+    margin: 10px;
+
+}.heelo-about h3{
+    font-size: 2rem;
+}
+.heelo-about .fa{
+    color: #ff0000;
+    font-size: 1.6rem;
+}
+.deg{
+    transform: rotate(-5deg);
+}
+.dega{
+    transform: rotate(16deg);
+}
+.degb{
+    transform: rotate(348deg);
+}
+.degc{
+    transform: rotate(17deg);
+}
+ 
+/* Portrait */
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    .carousel-caption h1 {
+        font-size: 7rem !important;
+    }
+    .about-right::after {
+        top: -152px !important;
+        left: -143px !important;
+    }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (orientation: landscape) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    .carousel-caption h1 {
+        font-size: 7rem !important;
+    }
+    .about-right::after {
+        top: -157px;
+        left: -103px;
+    
+    }
+
+}
