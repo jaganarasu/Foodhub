@@ -111,17 +111,17 @@ height: 100%;
     /* text-shadow: 2px 2px #91ac00;   */
     text-transform: uppercase;
     text-shadow: 
-    1px 1px #22260a,
-    2px 2px rgba(145, 172, 0, 0.69), /* 69% opacity */
-    3px 3px rgba(145, 172, 0, 0.50), /* 50% opacity */
-    4px 4px rgba(145, 172, 0, 0.40), /* 40% opacity */
-    5px 5px rgba(145, 172, 0, 0.35), /* 35% opacity */
-    6px 6px rgba(145, 172, 0, 0.30), /* 30% opacity */
-    7px 7px rgba(145, 172, 0, 0.25), /* 25% opacity */
-    8px 8px rgba(145, 172, 0, 0.20), /* 20% opacity */
-    9px 9px rgba(145, 172, 0, 0.15), /* 15% opacity */
-    10px 10px rgba(145, 172, 0, 0.10), /* 10% opacity */
-    10px 10px 30px rgba(0, 0, 0, 0.7); /* Black shadow with 70% opacity */
+        1px 1px #304505,
+        2px 2px rgba(48, 69, 5, 0.69), /* Using rgba for transparency */
+        3px 3px rgba(48, 69, 5, 0.50),
+        4px 4px rgba(48, 69, 5, 0.40),
+        5px 5px rgba(48, 69, 5, 0.35),
+        6px 6px rgba(48, 69, 5, 0.30),
+        7px 7px rgba(48, 69, 5, 0.25),
+        8px 8px rgba(48, 69, 5, 0.20),
+        9px 9px rgba(48, 69, 5, 0.15),
+        10px 10px rgba(48, 69, 5, 0.10),
+        10px 10px 30px rgba(0, 0, 0, 0.7); /* Black shadow */
 
 
 }
