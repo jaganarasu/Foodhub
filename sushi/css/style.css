@@ -2687,12 +2687,10 @@ text-shadow: none;
     height: 608px;
     content: " ";
     position: absolute;
-    bottom: -142px;
-    right: -320px;
+    bottom: -200px;
+    right: -354px;
     background-image: url('../images/bg-1.png'); /* Add image */
     background-size: cover;  
-    opacity: 0.5;
-    transform: scale(0.5);
-
-
+    opacity: 1;
+    transform: scale(0.3);
   }
